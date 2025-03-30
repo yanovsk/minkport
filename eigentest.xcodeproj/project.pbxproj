@@ -36,11 +36,23 @@
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		F3D6B3102D99F7C6000DADB3 /* Exceptions for "eigentest" folder in "Compile Sources" phase from "eigentest" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = F3D6A6B12D99F5BD000DADB3 /* Sources */;
+			membershipExceptions = (
+				"eigentest-Bridging-Header.h",
+				MyEigenWrapper.h,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		F3D6A6B72D99F5BD000DADB3 /* eigentest */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				F3D6A6D62D99F5BE000DADB3 /* Exceptions for "eigentest" folder in "eigentest" target */,
+				F3D6B3102D99F7C6000DADB3 /* Exceptions for "eigentest" folder in "Compile Sources" phase from "eigentest" target */,
 			);
 			path = eigentest;
 			sourceTree = "<group>";
@@ -240,6 +252,7 @@
 				DEVELOPMENT_TEAM = J339788N6G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = /opt/homebrew/include/eigen3;
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -250,6 +263,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "eigentest/eigentest-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 7;
 			};
@@ -266,6 +280,7 @@
 				DEVELOPMENT_TEAM = J339788N6G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = /opt/homebrew/include/eigen3;
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -276,6 +291,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "eigentest/eigentest-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 7;
 			};
