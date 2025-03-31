@@ -20,6 +20,18 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F3D6B3462D99FD97000DADB3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		F3D6A6B52D99F5BD000DADB3 /* eigentest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eigentest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D6A6B92D99F5BD000DADB3 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
@@ -45,6 +57,24 @@
 				MyEigenWrapper.h,
 			);
 		};
+		F3D6B37F2D9A1094000DADB3 /* Exceptions for "eigentest" folder in "Copy Files" phase from "eigentest" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			attributesByRelativePath = {
+				"deps/qpsolvers/lib/libqpsolvers-eigen-proxqp.dylib" = (CodeSignOnCopy, );
+				"deps/qpsolvers/lib/libqpsolvers-eigen.dylib" = (CodeSignOnCopy, );
+				deps/qpsolvers/lib/libsharedlibpp.0.0.3.dylib = (CodeSignOnCopy, );
+				deps/qpsolvers/lib/libsharedlibpp.1.dylib = (CodeSignOnCopy, );
+				deps/qpsolvers/lib/libsharedlibpp.dylib = (CodeSignOnCopy, );
+			};
+			buildPhase = F3D6B3462D99FD97000DADB3 /* CopyFiles */;
+			membershipExceptions = (
+				"deps/qpsolvers/lib/libqpsolvers-eigen-proxqp.dylib",
+				"deps/qpsolvers/lib/libqpsolvers-eigen.dylib",
+				deps/qpsolvers/lib/libsharedlibpp.0.0.3.dylib,
+				deps/qpsolvers/lib/libsharedlibpp.1.dylib,
+				deps/qpsolvers/lib/libsharedlibpp.dylib,
+			);
+		};
 /* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -53,6 +83,7 @@
 			exceptions = (
 				F3D6A6D62D99F5BE000DADB3 /* Exceptions for "eigentest" folder in "eigentest" target */,
 				F3D6B3102D99F7C6000DADB3 /* Exceptions for "eigentest" folder in "Compile Sources" phase from "eigentest" target */,
+				F3D6B37F2D9A1094000DADB3 /* Exceptions for "eigentest" folder in "Copy Files" phase from "eigentest" target */,
 			);
 			path = eigentest;
 			sourceTree = "<group>";
@@ -120,6 +151,7 @@
 				F3D6A6B12D99F5BD000DADB3 /* Sources */,
 				F3D6A6B22D99F5BD000DADB3 /* Frameworks */,
 				F3D6A6B32D99F5BD000DADB3 /* Resources */,
+				F3D6B3462D99FD97000DADB3 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -252,11 +284,19 @@
 				DEVELOPMENT_TEAM = J339788N6G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				HEADER_SEARCH_PATHS = /opt/homebrew/include/eigen3;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include/eigen3,
+					"$(PROJECT_DIR)/eigentest/deps/qpsolvers/include",
+				);
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/eigentest/deps/qpsolvers/lib",
+					"$(PROJECT_DIR)/eigentest/deps/qpsolver/lib",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dima.eigentest;
@@ -280,11 +320,19 @@
 				DEVELOPMENT_TEAM = J339788N6G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				HEADER_SEARCH_PATHS = /opt/homebrew/include/eigen3;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include/eigen3,
+					"$(PROJECT_DIR)/eigentest/deps/qpsolvers/include",
+				);
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/eigentest/deps/qpsolvers/lib",
+					"$(PROJECT_DIR)/eigentest/deps/qpsolver/lib",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dima.eigentest;

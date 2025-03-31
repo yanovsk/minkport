@@ -1,30 +1,32 @@
-//
-//  ContentView.swift
-//  eigentest
-//
-//  Created by Dima Yanovsky on 3/30/25.
-//
-
 import SwiftUI
-import RealityKit
-import RealityKitContent
 
 struct ContentView: View {
+    @State private var qpSolution: [Double] = []
 
     var body: some View {
-        VStack {
-            Model3D(named: "Scene", bundle: realityKitContentBundle)
-                .padding(.bottom, 50)
-
-            Text("Hello, world!")
-
-            ToggleImmersiveSpaceButton()
+        VStack(spacing: 20) {
+            Text("QP Solution:")
+                .font(.headline)
+            if qpSolution.isEmpty {
+                Text("Calculating...")
+            } else {
+                Text(qpSolution.map { String(format: "%.4f", $0) }.joined(separator: ", "))
+                    .font(.body)
+            }
         }
         .padding()
+        .onAppear {
+            if let sol = solveExampleQP() as? [Double] {
+                qpSolution = sol
+            } else {
+                qpSolution = []
+            }
+        }
     }
 }
 
-#Preview(windowStyle: .automatic) {
-    ContentView()
-        .environment(AppModel())
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }
