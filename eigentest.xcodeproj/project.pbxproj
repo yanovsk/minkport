@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F3D6A6BB2D99F5BD000DADB3 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = F3D6A6BA2D99F5BD000DADB3 /* RealityKitContent */; };
+		F3D6B3862D9A18C0000DADB3 /* Mujoco in Frameworks */ = {isa = PBXBuildFile; productRef = F3D6B3852D9A18C0000DADB3 /* Mujoco */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3D6A6BB2D99F5BD000DADB3 /* RealityKitContent in Frameworks */,
+				F3D6B3862D9A18C0000DADB3 /* Mujoco in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +165,7 @@
 			name = eigentest;
 			packageProductDependencies = (
 				F3D6A6BA2D99F5BD000DADB3 /* RealityKitContent */,
+				F3D6B3852D9A18C0000DADB3 /* Mujoco */,
 			);
 			productName = eigentest;
 			productReference = F3D6A6B52D99F5BD000DADB3 /* eigentest.app */;
@@ -219,6 +222,9 @@
 			);
 			mainGroup = F3D6A6AC2D99F5BD000DADB3;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				F3D6B3842D9A18C0000DADB3 /* XCLocalSwiftPackageReference "../Mujoco" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F3D6A6B62D99F5BD000DADB3 /* Products */;
 			projectDirPath = "";
@@ -536,10 +542,21 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		F3D6B3842D9A18C0000DADB3 /* XCLocalSwiftPackageReference "../Mujoco" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../Mujoco;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		F3D6A6BA2D99F5BD000DADB3 /* RealityKitContent */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = RealityKitContent;
+		};
+		F3D6B3852D9A18C0000DADB3 /* Mujoco */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Mujoco;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

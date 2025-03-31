@@ -1,4 +1,5 @@
 import SwiftUI
+import Mujoco
 
 struct ContentView: View {
     @State private var qpSolution: [Double] = []
